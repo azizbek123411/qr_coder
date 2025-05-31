@@ -28,6 +28,11 @@ class _GenerateQrCodeState extends State<GenerateQrCode> {
                   qrData = value;
                 });
               },
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'Enter data to encode',
+                hintText: 'e.g. Hello, QR Code!',
+              ),
             ),
             if(qrData != null) PrettyQrView.data(data: qrData!)
           ],
